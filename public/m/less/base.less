@@ -1,0 +1,80 @@
+@mainColor:#006699;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img{
+    vertical-align: middle;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 0.45rem;
+    display: flex;
+    justify-content: center;
+    background: @mainColor; // background: #006699;
+    a {
+        width: 0.45rem;
+        height: 0.45rem;
+        line-height: 0.45rem;
+        text-align: center;
+        color: white;
+        font-size: 0.18rem;
+    }
+    h4 {
+        flex: 1;
+        color: white;
+        line-height: 0.45rem;
+        text-align: center;
+        margin: 0;
+    }
+}
+
+body{
+    max-width: 750px;
+    margin: 0 auto;
+    // 把MUI默认字体17变成`14px
+    font-size: 0.14rem;
+    //如果感觉字体有一点偏上, 是因为行高继承了body默认的12px的行高
+    line-height: 0.14rem;
+}
+
+#footer{
+    width: 100%;
+    height: 0.45rem;
+    background: @mainColor;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    .mui-row>div{
+        text-align: center;
+        font-size: 0.14rem;
+        height: 0.45rem;
+        a{  
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            color: white;
+            span{
+                margin-top: 0.05rem;
+            }
+        }
+    }
+}

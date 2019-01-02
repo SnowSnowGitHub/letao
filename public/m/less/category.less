@@ -1,0 +1,87 @@
+@import 'base.less';
+
+body{
+    padding: 0.45rem 0;
+    background: #ddd;
+    height: 100vh;
+}
+#main{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    .left{
+        width: 0.8rem;
+        position: relative;
+        .mui-scroll-wrapper,.mui-scroll,ul{
+            width: 100%;
+            min-height: 101%;
+            li{
+                width: 0.8rem;
+                height: 0.45rem;
+                background: white;
+                &.active{
+                    background:#ccc;
+                }
+                a{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    color: gray;
+                    line-height: 0.45rem;
+                }
+            }
+        }
+    }
+    .right{
+        position: relative;
+        flex:1;
+        width: 100%;
+        min-height: 101%;
+        .mui-scroll-wrapper,.mui-scroll{
+            width: 100%;
+        .banner{
+            width: 100%;
+            padding: 0.1rem;
+            a{
+                display: block;
+                width: 100%;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        .content{
+            padding: 0.1rem;
+            h4{
+                font-weight: normal;
+                color: #666666;
+                font-size: 0.14rem;
+            }
+            .brand{
+                width: 100%;
+                // .mui-row{
+                //     width: 100%;
+                //     .mui-col-xs-4{
+                //         width: 100%;
+
+                //     }
+                // }
+                a{
+                    display: block;
+                    width: 100%;
+                    background: white;
+                    text-align: center;
+                    img{
+                        width: 100%;
+                    }
+                    p{
+                        margin:0.1rem 0 0;
+                    }
+                }
+            }
+        }
+    }
+    }
+}
