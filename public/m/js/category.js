@@ -7,3 +7,45 @@ mui('.mui-scroll-wrapper').scroll({
     indicators: false, //是否显示滚动条
     bounce: true //是否启用回弹
 });
+
+
+// 使用zepto的$.ajax发送请求
+// 分类页面左侧的数据请求
+$.ajax({
+    //默认的type就是get, 可以省略不写
+    type:'get',
+    url:'/category/queryTopCategory',//url是请求地址, 必须要写
+    //dataType:'json',//默认的也是把json转出为JS对象, 可以省略
+    dataType:'json',
+    success:function(obj){
+        console.log(obj);
+        var html=template('categoryLeftTpl',obj);
+        // console.log(html);
+        $('#main .left ul').html(html);
+    }
+})
+
+
+// 分类页面右侧的数据请求
+getRigthtCategory(1)
+$('#main .left ul').on('click','li a',function(){
+    var id=$(this).data('id');
+    getRigthtCategory(id);
+    $('#main .left ul li').eq(id-1).addClass('active').siblings().removeClass('active');
+})
+
+
+//封装获取右侧数据的方法
+function getRigthtCategory(id){
+    $.ajax({
+        url:'/category/querySecondCategory',
+        data:{
+            id:id
+        },
+        success:function(obj){
+            console.log(obj);
+            var html=template('categoryRightTpl',obj);
+            $('#main .right .mui-row').html(html);
+        }
+    })
+}

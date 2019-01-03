@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script id="userTpl" type="text/html">
+        <h1>{{name}}</h1>
+        
+    </script>
+    <script>
+        function template(id,obj){
+            var template = document.querySelector('#'+id).innerHTML;
+            console.log(template);
+            // 去掉{{之前的
+            var str = template.split('{{');
+            // console.log(str);
+            // 去掉}}之后的
+            var key = str[1].split('}}')[0];
+            console.log(key);
+            console.log(obj[key]);
+            var html =  template.replace('{{'+key+'}}',obj[key]);
+            console.log(html);
+            
+        //   document.body.innerHTML = '<h1>'+obj.num+'</h1>';
+        //   document.body.innerHTML += '<h1>'+obj.name+'</h1>';
+        //   var html = '';
+        //   html += '<h1>'+obj.num+'</h1>';
+        //   html += '<h1>'+obj.name+'</h1>';
+          return html;
+        }    
+
+        var name = '张三';
+        var num = 10;
+        var data = {
+            num:10,
+            name:'张三'
+        }
+        // 模板函数 第一个参数是模板id 第二个参数是一个对象(你要渲染的数据)
+        var html = template('userTpl',data);
+        document.body.innerHTML = html;
+    </script>
+</body>
+</html>

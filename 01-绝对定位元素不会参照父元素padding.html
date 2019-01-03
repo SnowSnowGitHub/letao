@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .parent{
+            width: 500px;
+            height: 500px;
+            padding: 100px;
+            position: relative;
+            border:1px solid #0f0;
+        }
+        .children{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: red;
+        }
+        .row{
+            padding: 100px;
+            /* 影响里面的列  因为列 没有定位 会受到padding影响 */
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="children">
+            <div class="row">
+                <div>
+                    列
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

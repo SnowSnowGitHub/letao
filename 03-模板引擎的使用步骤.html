@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <h1></h1>
+    <!-- 推荐吧模板script标签放到所有标签的后面 不能放到自己代码的后面 -->
+    <script id="tpl" type="text/html">
+        <!-- name键的值是一个字符串 可以直接使用 -->
+        {{name}}
+        <!-- arr 可能是一个数组 数组的复杂类型的数据不能直接使用 使用遍历的方式使用 -->
+        {{arr}}
+        <!-- 数组使用each遍历这个数组 -->
+        <ul>
+            <!-- each 数组名 值名 索引名   值和索引可以省略 默认$value  $index-->
+            {{each arr zhi i}}
+                <!-- $value arr循环的每一个值 -->
+                <li>{{zhi}}</li>
+                <!-- $index是循环的每一个索引 -->
+                <li>{{i}}</li>
+            {{/each}}
+            <!-- 因为list也是一个数字需要遍历数组 -->
+            {{each list}}
+                <!-- $value arr循环的每一个值 -->
+                <li>{{$value}}</li>
+                <!-- $index是循环的每一个索引 -->
+                <li>{{$index}}</li>
+            {{/each}}
+        </ul>
+        <ul>
+            
+            {{each rows}}
+                <li>{{$value.categoryName}}</li>
+                <li>{{$value.id}}</li>
+            {{/each}}
+        </ul>
+    </script>
+    <!-- 1. 引入一个模板引擎的js包 -->
+    <script src="./public/m/lib/artTemplate/template-web.js"></script>
+
+    <script>
+        // function (){
+
+        // }
+        // function fun(){
+
+        // }
+        var data = {
+            name: '张三'
+        };
+        // 传人有名字对象
+        var html = template('tpl', data);
+        document.querySelector('div').innerHTML = html;
+        // 传人一个匿名对象
+        var html = template('tpl', {
+            name: '匿名'
+        });
+        document.querySelector('h1').innerHTML = html;
+        // 模板函数 不考虑你对象名字 只要对象里面属性名 和 属性值
+
+        var data = {
+            name: '普通值',
+            arr: ["张三", "李四", "王五", "赵六"],
+            list: ['刘德华', '薛之谦', '邓紫棋', '陈奕迅']
+        }
+        var html = template('tpl', data);
+        document.querySelector('h1').innerHTML = html;
+
+        var data = {
+            "total": 5,
+            "rows": [{
+                    "id": 1,
+                    "categoryName": "运动馆",
+                    "isDelete": 1
+                },
+                {
+                    "id": 2,
+                    "categoryName": "女士馆",
+                    "isDelete": 1
+                },
+                {
+                    "id": 3,
+                    "categoryName": "男士馆",
+                    "isDelete": 1
+                },
+                {
+                    "id": 4,
+                    "categoryName": "帆布馆",
+                    "isDelete": 1
+                },
+                {
+                    "id": 5,
+                    "categoryName": "户外管",
+                    "isDelete": 1
+                }
+            ]
+        }
+        var html = template('tpl', data);
+        document.querySelector('h1').innerHTML = html;
+        var data = [{
+                    "id": 1,
+                    "categoryName": "运动馆",
+                    "isDelete": 1
+                },
+                {
+                    "id": 2,
+                    "categoryName": "女士馆",
+                    "isDelete": 1
+                },
+                {
+                    "id": 3,
+                    "categoryName": "男士馆",
+                    "isDelete": 1
+                },
+                {
+                    "id": 4,
+                    "categoryName": "帆布馆",
+                    "isDelete": 1
+                },
+                {
+                    "id": 5,
+                    "categoryName": "户外管",
+                    "isDelete": 1
+                }
+            ];
+            var html = template('tpl', {list:data});
+        document.querySelector('h1').innerHTML = html;
+    </script>
+
+</body>
+
+</html>

@@ -32,7 +32,7 @@ a {
   color: white;
   font-size: 0.18rem;
 }
-#header h4 {
+#header .center {
   flex: 1;
   color: white;
   line-height: 0.45rem;
@@ -68,6 +68,9 @@ body {
   height: 100%;
   color: white;
 }
+#footer .mui-row > div a.active {
+  color: orangered;
+}
 #footer .mui-row > div a span {
   margin-top: 0.05rem;
 }
@@ -75,6 +78,17 @@ body {
   padding: 0.45rem 0;
   background: #ddd;
   height: 100vh;
+}
+#header .center {
+  height: 0.45rem;
+}
+#header .center input {
+  padding: 0;
+  padding-left: 0.1rem;
+  margin: 0;
+  border: 0;
+  height: 0.3rem;
+  border-radius: 0.05rem;
 }
 #main {
   width: 100%;
