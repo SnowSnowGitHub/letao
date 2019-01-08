@@ -13,9 +13,6 @@ a {
   text-decoration: none;
   color: black;
 }
-input {
-  font-size: 0.14rem;
-}
 #header {
   position: fixed;
   left: 0;
@@ -76,4 +73,8 @@ body {
 }
 #footer .mui-row > div a span {
   margin-top: 0.05rem;
+}
+body {
+  padding: 0.45rem 0;
+  height: 100vh;
 }

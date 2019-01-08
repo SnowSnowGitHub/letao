@@ -77,3 +77,19 @@ body {
 #footer .mui-row > div a span {
   margin-top: 0.05rem;
 }
+body {
+  padding: 0.45rem 0;
+}
+#main {
+  position: relative;
+  width: 100%;
+}
+#main .username {
+  margin-bottom: 0.1rem;
+}
+#main li:nth-child(n+2) {
+  line-height: 0.3rem;
+}
+#main li:nth-child(n+2) .btn-loginout {
+  width: 100%;
+}

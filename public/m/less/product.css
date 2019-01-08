@@ -1,0 +1,159 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+img {
+  vertical-align: middle;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+#header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 0.45rem;
+  display: flex;
+  justify-content: center;
+  background: #006699;
+}
+#header a {
+  width: 0.45rem;
+  height: 0.45rem;
+  line-height: 0.45rem;
+  text-align: center;
+  color: white;
+  font-size: 0.18rem;
+}
+#header .center {
+  flex: 1;
+  color: white;
+  line-height: 0.45rem;
+  text-align: center;
+  margin: 0;
+}
+body {
+  max-width: 750px;
+  margin: 0 auto;
+  font-size: 0.14rem;
+  line-height: 0.14rem;
+}
+#footer {
+  width: 100%;
+  height: 0.45rem;
+  background: #006699;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+}
+#footer .mui-row > div {
+  text-align: center;
+  font-size: 0.14rem;
+  height: 0.45rem;
+}
+#footer .mui-row > div a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+#footer .mui-row > div a.active {
+  color: orangered;
+}
+#footer .mui-row > div a span {
+  margin-top: 0.05rem;
+}
+body {
+  padding: 0.45rem 0;
+  height: 100vh;
+}
+#main {
+  width: 100%;
+  position: relative;
+  height: 100%;
+}
+#main .search-form {
+  padding: 0.1rem;
+  height: 0.54rem;
+  width: 100%;
+}
+#main .search-form form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+#main .search-form form .searchBtn {
+  width: 0.6rem;
+  height: 100%;
+  background: #006699;
+  color: white;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+#main .search-form form .searchInput {
+  flex: 1;
+  height: 100%;
+  background: white;
+  margin-bottom: 0;
+  box-sizing: border-box;
+  border: 1px solid #006699;
+  text-align: left;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: 1px solid transparent;
+}
+#main .mui-card .mui-card-header a {
+  font-size: 0.14rem;
+  color: gray;
+}
+#main .mui-card .mui-card-header a.active {
+  color: red;
+}
+#main .mui-card .mui-card-content,
+#main .mui-card .mui-rows {
+  width: 100%;
+}
+#main .mui-card .mui-card-content .product-box a,
+#main .mui-card .mui-rows .product-box a {
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 0.05rem;
+}
+#main .mui-card .mui-card-content .product-box a:nth-child(odd),
+#main .mui-card .mui-rows .product-box a:nth-child(odd) {
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+#main .mui-card .mui-card-content .product-box a img,
+#main .mui-card .mui-rows .product-box a img {
+  width: 100%;
+}
+#main .mui-card .mui-card-content .product-box a .product-title,
+#main .mui-card .mui-rows .product-box a .product-title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  line-height: 0.14rem;
+}
+#main .mui-card .mui-card-content .product-box a .product-price span,
+#main .mui-card .mui-rows .product-box a .product-price span {
+  color: #be0a0a;
+}
+#main .mui-card .mui-card-content .product-box a .product-price del,
+#main .mui-card .mui-rows .product-box a .product-price del {
+  font-size: 0.12rem;
+  color: #663214;
+}

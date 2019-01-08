@@ -1,0 +1,102 @@
+@import "./base.less";
+
+body{
+    padding: 0.45rem 0 0.8rem;
+    height: 100vh;
+}
+// .mui-popup-title{
+//     display: none;
+// }
+
+#order{
+    position: fixed;
+    bottom: 0.45rem;
+    left: 0;
+    border-top: 1px solid #ccc;
+    line-height: 0.35rem;
+    height: 0.35rem;
+    width: 100%;
+    display: flex;
+    background: white;
+    .btn-order{
+        width: 0.82rem;
+    }
+    p{
+        flex: 1;
+        margin:0;
+        padding-left: 0.1rem;
+        font-weight: 700;
+        .totalPrice{
+            color: red;
+        }
+    }
+
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    ul{
+        width: 100%;
+        li{
+            position: relative;
+            a.mui-slider-handle{
+                .product-left{
+                    width: 0.8rem;
+                    // background: pink;
+                    img{
+                        width: 100%;
+                    }
+                    .mui-checkbox{
+                        width: 100%;
+                        height: 0.2rem;
+                        input[type=checkbox]{
+                            position: absolute;
+                            top: 0;
+                            left: 50%;
+                            margin-left: -0.1rem;
+                            width: 0.2rem;
+                            height: 0.2rem;
+                        }
+                        input[type=checkbox]:before{
+                            font-size: 0.2rem;
+                        }
+                    }
+                }
+                .product-right{
+                    padding-left: 0.2rem;
+                    .product-title{
+                        line-height: 0.2rem;
+                        white-space: normal;
+                        color: rgb(104, 103, 103);
+                    }
+                    .product-price{
+                        line-height: 0.3rem;
+                        span{
+                            color: red;
+                            font-weight: bold;
+                            font-size: 0.16rem;
+                        }
+                        del{
+                            font-size: 0.14rem;
+                        }
+                    }
+                    .product-param{
+                        line-height: 0.3rem;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.mui-popup .mui-popup-inner .product-size{
+    text-align: left;
+    vertical-align: middle;
+    button{
+        margin-bottom: 0.05rem;
+        vertical-align: middle;
+    }
+} 

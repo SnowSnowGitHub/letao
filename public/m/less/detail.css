@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+img {
+  vertical-align: middle;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+input {
+  font-size: 0.14rem;
+}
+#header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 0.45rem;
+  display: flex;
+  justify-content: center;
+  background: #006699;
+}
+#header a {
+  width: 0.45rem;
+  height: 0.45rem;
+  line-height: 0.45rem;
+  text-align: center;
+  color: white;
+  font-size: 0.18rem;
+}
+#header .center {
+  flex: 1;
+  color: white;
+  line-height: 0.45rem;
+  text-align: center;
+  margin: 0;
+}
+body {
+  max-width: 750px;
+  margin: 0 auto;
+  font-size: 0.14rem;
+  line-height: 0.14rem;
+}
+#footer {
+  width: 100%;
+  height: 0.45rem;
+  background: #006699;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+}
+#footer .mui-row > div {
+  text-align: center;
+  font-size: 0.14rem;
+  height: 0.45rem;
+}
+#footer .mui-row > div a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+#footer .mui-row > div a.active {
+  color: orangered;
+}
+#footer .mui-row > div a span {
+  margin-top: 0.05rem;
+}
+body {
+  padding: 0.45rem 0;
+  height: 100vh;
+}
+.mui-popup-title {
+  display: none;
+}
+#main {
+  width: 100%;
+}
+#main .mui-scroll {
+  height: 101%;
+}
+#main .mui-scroll .mui-slider,
+#main .mui-scroll .mui-slider-group,
+#main .mui-scroll .mui-slider-item {
+  width: 100%;
+}
+#main .mui-scroll .mui-slider a,
+#main .mui-scroll .mui-slider-group a,
+#main .mui-scroll .mui-slider-item a {
+  display: block;
+  width: 100%;
+}
+#main .mui-scroll .mui-slider a img,
+#main .mui-scroll .mui-slider-group a img,
+#main .mui-scroll .mui-slider-item a img {
+  width: 100%;
+}
+#main .mui-scroll .productDetail .title {
+  color: #333333;
+  line-height: 0.16rem;
+}
+#main .mui-scroll .productDetail .title strong {
+  color: black;
+}
+#main .mui-scroll .productDetail .product-size {
+  vertical-align: middle;
+}
+#main .mui-scroll .productDetail .product-size button {
+  vertical-align: middle;
+  margin-bottom: 0.05rem;
+}
+#main .mui-scroll .productDetail .product-price {
+  font-size: 0.16rem;
+}
+#main .mui-scroll .productDetail .product-price .price {
+  color: red;
+  font-size: 0.16rem;
+}
+#main .mui-scroll .productDetail .product-price .oldPrice {
+  color: gray;
+  font-size: 0.12rem;
+}
+#footer {
+  background: #b9b8b8;
+}
+#footer .mui-row > div:nth-child(n+2) {
+  padding: 0.05rem;
+}
+#footer .mui-row > div a .fa {
+  color: gray;
+  font-size: 0.18rem;
+}
+#footer .mui-row > div button {
+  width: 100%;
+  height: 100%;
+  font-size: 0.16rem;
+}

@@ -40,7 +40,7 @@
                 <!--页眉，放置标题-->
                 <div class="mui-card-header">
                     <span>搜索历史</span>
-                    <span><i class="fa fa-trash-o" aria-hidden="true"></i>清空记录</span>
+                    <span class="clearRecord"><i class="fa fa-trash-o" aria-hidden="true"></i>清空记录</span>
                 </div>
                 <!--内容区-->
                 <div class="mui-card-content">
@@ -75,14 +75,13 @@
     <script type="text/html" id="historyItem">
         {{ if(data.length>0 )}}
             {{ each data value index }}
-            <li class="mui-table-view-cell">{{value}}
+            <li class="mui-table-view-cell" data-value="{{value}}">{{value}}
                     <span class="mui-badge fa fa-times" data-id="{{index}}"></span>
                 </li>
             {{ /each }}
         {{ else }}
             <li class="mui-table-view-cell">还没有任何历史记录</li>
         {{ /if }}
-
     </script>
 
     <!-- 1 引入MUI使用的js -->

@@ -77,3 +77,25 @@ body {
 #footer .mui-row > div a span {
   margin-top: 0.05rem;
 }
+body {
+  padding: 0.45rem 0;
+  height: 100vh;
+}
+#main {
+  width: 100%;
+}
+#main form .mui-input-row .vcode {
+  width: 35%;
+  float: left;
+}
+#main form .mui-input-row .btnGetVcode {
+  width: 29%;
+  float: left;
+}
+#main form .mui-button-row {
+  padding-left: 1%;
+  padding-right: 1%;
+}
+#main form .mui-button-row .btnRegister {
+  width: 100%;
+}

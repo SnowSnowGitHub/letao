@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人中心</title>
+    <!-- 引入站点图标 -->
+    <link rel="icon" href="./images/favicon.ico">
+    <!-- 1 引入MUI的css  -->
+    <link rel="stylesheet" href="./lib//mui/css/mui.min.css">
+    <!-- 2 引入字体图标库 fontAwesome -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.min.css">
+    <!-- 3 引入自己写的less -->
+    <link rel="stylesheet/less" href="./less/user.less">
+    <script src="./lib/less/less.js"></script>
+    <!-- 4 引入rem的js代码 -->
+    <script src="./js/rem.js"></script>
+    <script>
+        document.documentElement.style.display="none";
+    </script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <a href="#" class="left"><i class="fa fa-arrow-left"></i></a>
+        <h4 class="center">用户注册页面</h4>
+        <a href="#"></a>
+    </header>
+
+    <!-- 主体内容 -->
+    <main id="main">
+        <ul class="mui-table-view">
+                <li class="mui-table-view-cell mui-media">
+                        <a href="javascript:;"> 
+                            <img class="mui-media-object mui-pull-left" src="./images/user.jpg">
+                            <div class="mui-media-body">
+                                <p class="username">用户名:snow</p>
+                                <p class="tel">绑定手机:1111111</p>
+                            </div>  
+                        </a>
+                    </li>
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">账号与安全</a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">我的购物车</a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">收货地址管理</a>
+            </li>
+            <li class="mui-table-view-cell">
+                <div><button type="button" class="mui-btn mui-btn-outlined btn-loginout">退出登录</button></div>
+            </li>
+        </ul>
+    </main>
+
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <div class="mui-row">
+            <div class="mui-col-xs-3"><a href="index.html"><i class="fa fa-home"></i><span>首页</span></a></div>
+            <div class="mui-col-xs-3"><a href="category.html"><i class="fa fa-bars"></i><span>分类</span></a></div>
+            <div class="mui-col-xs-3"><a href="cart.html"><i class="fa fa-shopping-cart"></i><span>购物车</span></a></div>
+            <div class="mui-col-xs-3"><a href="user.html" class="active"><i class="fa fa-user"></i><span>个人中心</span></a></div>
+        </div>
+    </footer>
+
+
+
+    <!-- 1 引入MUI使用的js -->
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <!-- 2 引入 zepto获取元素 发送ajax请求-->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- 3 引入模板引擎的js 注意引入的是template-web.js  -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 引入自己写的js文件 -->
+    <script src="./js/user.js"></script>
+</body>
+
+</html>

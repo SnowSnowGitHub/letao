@@ -30,10 +30,15 @@ $(function(){
         localStorage.setItem('historyItem',arr);
         
         //清空搜索框的内容
-        searchCon=$('.searchInput').val('');
+        $('.searchInput').val('');
 
         //更新当前的历史记录
         updateHistory();
+        console.log(searchCon)
+        //完成搜索记录后跳转到商品详情的页面
+        var params='key='+searchCon+'&time'+new Date().getTime();
+        //如果不手动加密的话 默认的是encodeURI加密
+        location='product.html?'+params;
     })
 
 
@@ -44,7 +49,7 @@ $(function(){
         arr=JSON.parse(arr);
         var id=$(this).data('id');
         //移除点击的这一个span标签
-        $('.search-history ul span').eq(id).remove();
+        $('.search-history ul li').eq(id).remove();
         arr.splice(id,1);
         arr=JSON.stringify(arr);
         localStorage.setItem('historyItem',arr);
@@ -52,6 +57,14 @@ $(function(){
         updateHistory();
     })
 
+    //做清空历史记录的功能
+    $('.clearRecord').on('click',function(){
+        //删除localStorage里面key为historyItem的值
+        localStorage.removeItem('historyItem');
+        //删除全部的localstorage的值 现在我们localStorage里面只有historyItem这一个项 所以可以使用下面的全部清空
+        // localStorage.clear();
+        updateHistory();
+    })
 
 
     //初始化历史搜索记录
@@ -62,6 +75,15 @@ $(function(){
         var html=template('historyItem',{data:arr});
         $('.search-history ul').html(html);
     }
+    
+
+    // 做历史记录的点击搜索功能  点击跳转到产品对应的产品 需要使用事件委托进行注册
+    $('#main .search-history .mui-card-content ul').on('tap','li',function(){
+        var searchCon=$(this).data('value');
+        console.log(searchCon);
+        //拼接url然后跳转到商品详情页面 要把点击的这个历史记录的值传递过去
+        location='product.html?key='+searchCon+'&time='+new Date().getTime();
+    })
 })
 
 
